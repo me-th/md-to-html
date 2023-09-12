@@ -110,11 +110,14 @@
 	$: htmlOutput = lines.map(line => checkInput(line)).join('\n');
 </script>
 
-<h3>type markdown here</h3><br>
-<textarea name="markdownInput" id="markdownInput" cols="30" rows="10" bind:value={markdown} placeholder="type something!"></textarea>
-<br>
-<h3>html output</h3><button use:copy={htmlOutput} on:click={buttonState}>{copyButton}</button><br>
-<textarea name="htmlOutput" id="output" cols="30" rows="10" value={htmlOutput} disabled></textarea>
+<div class="leftBar">
+	<h3>type markdown here</h3><br>
+	<textarea name="markdownInput" id="markdownInput" cols="30" rows="10" bind:value={markdown} placeholder="type something!"></textarea>
+	<br>
+	<h3>html output</h3><button use:copy={htmlOutput} on:click={buttonState}>{copyButton}</button><br>
+	<textarea name="htmlOutput" id="output" cols="30" rows="10" value={htmlOutput} disabled></textarea>
+</div>
+
 <div class="half">
 	<h3>live preview</h3>
 	<div class="preview">
@@ -123,10 +126,22 @@
 </div>
 
 <style>
+	textarea{
+		width: 100%;
+		max-width: 700px;
+		height: 35%;
+	}
+	.leftBar {
+		position:fixed;
+		top: 0;
+		left: 10px;
+		width: 40%;
+		height: 100%;
+	}
 	.half {
 		position: fixed;
-		width: 1400px;
 		top: 0;
+		width: 50%;
 		height: 100%;
 		right: 10px;
 	}
@@ -134,5 +149,33 @@
 		padding: 5px;
 		border: 3px solid black;
 		height: 90%;
+	}
+	@media (max-width: 735px){
+		.half {
+			display: none;
+		}
+		.leftBar {
+		position:fixed;
+		top: 0;
+		left: 10px;
+		width: 100%;
+		height: 100%;
+	}
+	}
+	@media (min-width: 1000px){
+		.half {
+			position: fixed;
+			top: 0;
+			width: 75%;
+			height: 100%;
+			right: 10px;
+		}
+		.leftBar {
+		position:fixed;
+		top: 0;
+		left: 10px;
+		width: 20%;
+		height: 100%;
+	}
 	}
 </style>
