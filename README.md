@@ -16,6 +16,9 @@ simple markdown to html converter written purely in svelte
 ### what doesn't work
 almost everything else
 
+## live demo
+[here](https://sapphic-cafe.neocities.org/sillyprojects/markdownconverter/)
+
 ## screenshots
 
 ![screenshot of running app](https://cdn.discordapp.com/attachments/965779471275798569/1151273736037728367/Zrzut_ekranu_2023-09-12_o_23.50.31.png)
