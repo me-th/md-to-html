@@ -2,14 +2,16 @@
 simple markdown to html converter written purely in svelte
 
 ## what works
--images
--headers
--paragraphs
--injecting html code directly
--live preview of html generated from markdown
--copying html code
--hyperliks
--images inside hyperlinks
+<ul>
+  <li>images</li>
+  <li>headers</li>
+  <li>paragraphs</li>
+  <li>injecting html code directly</li>
+  <li>live preview of html generated from markdown</li>
+  <li>copying html code</li>
+  <li>hyperliks</li>
+  <li>images inside hyperlinks</li>
+</ul>
 
 ### what doesn't work
 almost everything else
